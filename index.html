@@ -33,6 +33,10 @@
       cursor: crosshair;
     }
 
+    #drawCanvas.resize-mode {
+      cursor: nwse-resize;
+    }
+
     #toolbar {
       position: fixed;
       top: 16px;
@@ -75,6 +79,10 @@
       color: hsl(217, 10%, 92%);
       font-size: 14px;
       min-width: 150px;
+    }
+
+    #toolbar input[type="file"] {
+      display: none;
     }
 
     #toolbar button {
@@ -718,6 +726,8 @@
     <button id="eraserBtn" class="secondary" data-testid="button-eraser">Eraser</button>
     <input type="number" id="textSizePicker" min="10" max="200" value="40" title="Text size">
     <input type="text" id="freeTextInput" placeholder="Add text (press Enter)..." data-testid="input-text">
+    <input type="file" id="mediaUpload" accept="image/*,video/*" multiple>
+    <button id="mediaUploadBtn" class="secondary" title="Upload images or videos">📎 Media</button>
     <button id="clearBtn" class="destructive" style="display: none;" data-testid="button-clear">Clear Canvas</button>
   </div>
 
